@@ -25,16 +25,16 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| Text Chat | Ask any agriculture question and get expert answers |
-| Image Diagnosis | Upload a crop photo → AI identifies diseases, pests & deficiencies |
-| Voice Input | Speak in English, Hindi, or Hinglish via Groq Whisper |
-| Voice Output | Bot reads answers aloud using Groq Orpheus TTS |
-| Conversation Memory | Remembers your chat context (Redis, with in-memory fallback) |
-| Prompt Caching | 50% cost savings — cached prefixes across requests |
-| Dark/Light Theme | Glassmorphism UI with one-click theme toggle |
-| Multilingual | Responds in English, Hindi, or Hinglish |
+| Feature             | Description                                                        |
+| ------------------- | ------------------------------------------------------------------ |
+| Text Chat           | Ask any agriculture question and get expert answers                |
+| Image Diagnosis     | Upload a crop photo → AI identifies diseases, pests & deficiencies |
+| Voice Input         | Speak in English, Hindi, or Hinglish via Groq Whisper              |
+| Voice Output        | Bot reads answers aloud using Groq Orpheus TTS                     |
+| Conversation Memory | Remembers your chat context (Redis, with in-memory fallback)       |
+| Prompt Caching      | 50% cost savings — cached prefixes across requests                 |
+| Dark/Light Theme    | Glassmorphism UI with one-click theme toggle                       |
+| Multilingual        | Responds in English, Hindi, or Hinglish                            |
 
 ![Sidhant Patel AI — Voice Chat on Mobile](Sample_image/chat-2.png)
 
@@ -113,21 +113,21 @@ Open **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 
 Copy `.env.example` to `LLM_Agri_Bot/.env` and configure:
 
-| Variable | Required | Default | Description |
-|----------|:--------:|---------|-------------|
-| `GROQ_API_KEY` | Yes | — | Your Groq API key ([get one](https://console.groq.com/keys)) |
-| `LLM_MODEL` | No | `openai/gpt-oss-120b` | Text LLM model |
-| `LLM_VISION_MODEL` | No | `meta-llama/llama-4-scout-17b-16e-instruct` | Vision LLM model |
-| `LLM_TEMPERATURE` | No | `0.3` | Model temperature (0–2) |
-| `LLM_MAX_TOKENS` | No | `2048` | Max response tokens |
-| `STT_MODEL` | No | `whisper-large-v3-turbo` | Speech-to-text model |
-| `TTS_MODEL` | No | `canopylabs/orpheus-v1-english` | Text-to-speech model |
-| `TTS_VOICE` | No | `autumn` | TTS voice name |
-| `REDIS_HOST` | No | `localhost` | Redis host (optional — falls back to memory) |
-| `REDIS_PORT` | No | `6379` | Redis port |
-| `REDIS_SSL` | No | `false` | Enable Redis SSL |
-| `FLASK_SECRET_KEY` | Yes* | `dev-secret-key` | Flask session secret (*required in production) |
-| `FLASK_DEBUG` | No | `true` | Enable debug mode |
+| Variable           | Required | Default                                     | Description                                                  |
+| ------------------ | :------: | ------------------------------------------- | ------------------------------------------------------------ |
+| `GROQ_API_KEY`     |   Yes    | —                                           | Your Groq API key ([get one](https://console.groq.com/keys)) |
+| `LLM_MODEL`        |    No    | `openai/gpt-oss-120b`                       | Text LLM model                                               |
+| `LLM_VISION_MODEL` |    No    | `meta-llama/llama-4-scout-17b-16e-instruct` | Vision LLM model                                             |
+| `LLM_TEMPERATURE`  |    No    | `0.3`                                       | Model temperature (0–2)                                      |
+| `LLM_MAX_TOKENS`   |    No    | `2048`                                      | Max response tokens                                          |
+| `STT_MODEL`        |    No    | `whisper-large-v3-turbo`                    | Speech-to-text model                                         |
+| `TTS_MODEL`        |    No    | `canopylabs/orpheus-v1-english`             | Text-to-speech model                                         |
+| `TTS_VOICE`        |    No    | `autumn`                                    | TTS voice name                                               |
+| `REDIS_HOST`       |    No    | `localhost`                                 | Redis host (optional — falls back to memory)                 |
+| `REDIS_PORT`       |    No    | `6379`                                      | Redis port                                                   |
+| `REDIS_SSL`        |    No    | `false`                                     | Enable Redis SSL                                             |
+| `FLASK_SECRET_KEY` |  Yes\*   | `dev-secret-key`                            | Flask session secret (\*required in production)              |
+| `FLASK_DEBUG`      |    No    | `true`                                      | Enable debug mode                                            |
 
 ---
 
@@ -180,24 +180,24 @@ LLM_Agri_Bot/
 ### Docker
 
 ```bash
-docker build -t krishi-sahayak .
-docker run -p 10000:10000 --env-file LLM_Agri_Bot/.env krishi-sahayak
+docker build -t Sidhant Patel AI .
+docker run -p 10000:10000 --env-file LLM_Agri_Bot/.env Sidhant Patel AI
 ```
 
 ---
 
 ## API Reference
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/` | Chat interface |
-| `POST` | `/chat` | Send text, image, or audio — returns AI response |
-| `POST` | `/chat/clear` | Clear conversation history |
-| `GET` | `/health` | Health check (Redis status) |
-| `GET` | `/robots.txt` | Search engine crawl rules |
-| `GET` | `/sitemap.xml` | XML sitemap |
-| `GET` | `/llms.txt` | AI crawler disclosure |
-| `GET` | `/.well-known/llms.txt` | AI crawler disclosure (well-known path) |
+| Method | Endpoint                | Description                                      |
+| ------ | ----------------------- | ------------------------------------------------ |
+| `GET`  | `/`                     | Chat interface                                   |
+| `POST` | `/chat`                 | Send text, image, or audio — returns AI response |
+| `POST` | `/chat/clear`           | Clear conversation history                       |
+| `GET`  | `/health`               | Health check (Redis status)                      |
+| `GET`  | `/robots.txt`           | Search engine crawl rules                        |
+| `GET`  | `/sitemap.xml`          | XML sitemap                                      |
+| `GET`  | `/llms.txt`             | AI crawler disclosure                            |
+| `GET`  | `/.well-known/llms.txt` | AI crawler disclosure (well-known path)          |
 
 ---
 
@@ -247,6 +247,6 @@ MIT License — see [LICENSE](LICENSE)
 
 **Built with care for Indian farmers**
 
-By [Mohammed Ashraf](https://www.linkedin.com/in/mohammed97ashraf) · [GitHub](https://github.com/mohammed97ashraf) · [LinkedIn](https://www.linkedin.com/in/mohammed97ashraf)
+By [Sidhant Patel](www.linkedin.com/in/sidhant-patel-patnwar-0b6290389) · [GitHub](https://github.com/sidpatel100) · [LinkedIn](www.linkedin.com/in/sidhant-patel-patnwar-0b6290389)
 
 </div>
