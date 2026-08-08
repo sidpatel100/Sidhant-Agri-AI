@@ -1,6 +1,6 @@
 <div align="center">
 
-# Krishi Sahayak
+# Sidhant Patel AI
 
 ### AI Agriculture Assistant for Indian Farmers
 
@@ -17,7 +17,7 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 
 <br/>
 
-![Krishi Sahayak — Web Interface](Sample_image/chat-interface.png)
+![Sidhant Patel AI — Web Interface](Sample_image/chat-interface.png)
 
 </div>
 
@@ -36,7 +36,7 @@ An AI-powered agriculture chatbot that helps Indian farmers with crop advice, pe
 | Dark/Light Theme | Glassmorphism UI with one-click theme toggle |
 | Multilingual | Responds in English, Hindi, or Hinglish |
 
-![Krishi Sahayak — Voice Chat on Mobile](Sample_image/chat-2.png)
+![Sidhant Patel AI — Voice Chat on Mobile](Sample_image/chat-2.png)
 
 ---
 
